@@ -1,4 +1,5 @@
 # Ruby on Railsチュートリアル: サンプルアプリケーション
+http://railstutorial.jp/chapters/filling_in_the_layout?version=4.2
 
 これは以下に基づいたサンプル・アプリケーションです
 [*Ruby on Railsチュートリアル:
