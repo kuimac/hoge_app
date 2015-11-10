@@ -24,4 +24,17 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
   #リスト6.11: email属性の検証に対するテスト
+
+  #リスト6.14: nameの長さの検証に対するテスト
+  test "name should not be too long" do
+    @user.name = "a" * 51
+    assert_not @user.valid?
+  end
+
+  test "email should not be too long" do
+    @user.email = "a" * 244 + "@example.com"
+    assert_not @user.valid?
+  end
+  #リスト6.14: nameの長さの検証に対するテスト
+
 end
