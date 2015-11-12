@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'signup' => 'user#new'
   #get 'user/new'
 
+  resources :users, :controller => :user
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
