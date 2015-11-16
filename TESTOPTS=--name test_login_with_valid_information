@@ -1,0 +1,21 @@
+Started
+
+
+
+Progress: |[0m[1000D[K[31mERROR[0m["test_login_with_invalid_information", UsersLoginTest, 0.006354]
+ test_login_with_invalid_information#UsersLoginTest (0.01s)
+NameError:         NameError: uninitialized constant User::BCry
+            app/models/user.rb:16:in `digest'
+        app/models/user.rb:16:in `digest'
+
+[0m[1000D[K[31mERROR[0m["test_login_with_valid_information", UsersLoginTest, 0.009057]
+ test_login_with_valid_information#UsersLoginTest (0.01s)
+NameError:         NameError: uninitialized constant User::BCry
+            app/models/user.rb:16:in `digest'
+        app/models/user.rb:16:in `digest'
+
+[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m[32m=[0m|
+
+Finished in 0.01254s
+2 tests, 0 assertions, [31m0 failures, 2 errors, [0m[33m0 skips[0m
+]2;[Minitest results] 2 tests
