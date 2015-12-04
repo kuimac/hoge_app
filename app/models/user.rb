@@ -10,6 +10,17 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  # アカウントを有効にする
+    def activate
+      update_attribute(:activated,    true)
+      update_attribute(:activated_at, Time.zone.now)
+    end
+
+    # 有効化用のメールを送信する
+    def send_activation_email
+      UserMailer.account_activation(self).deliver_now
+    end
+    
   # 与えられた文字列のハッシュ値を返す
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -45,6 +56,8 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  private
 
   # メールアドレスをすべて小文字にする
     def downcase_email
