@@ -22,9 +22,20 @@ group :development, :test do
 end
 
 group :test do
-  gem 'minitest-reporters', '1.0.5'
+  # 必須
+  gem "minitest"
+  gem "minitest-rails"
+  gem "minitest-rails-capybara" # capybaraで結合テストできるようにする
+
+  gem 'minitest-reporters', '1.0.5' # テスト結果の表示を整形
+#  gem "minitest-doc_reporter"       # テスト結果の表示を整形
+
+
+  gem 'minitest-ar-assertions', "0.1.1", :require => 'minitest_activerecord_assertions'
+  # assert_equalで拡張を続ける
+  gem "minitest-power_assert", "0.0.3" # assert_equalで拡張を続ける
   gem 'mini_backtrace',     '0.1.3'
-  gem 'guard-minitest',     '2.3.1'
+  gem 'guard-minitest',     '2.3.1' # guard を実行すると自動でテストしてくれる
 end
 
 group :production do
