@@ -81,7 +81,7 @@ class User < ActiveRecord::Base
       self.email = email.downcase
     end
 
-  # 有効化トークンとダイジェストを作成およびアサインする
+  # 有効化トークンとダイジェストを作成および代入する
       def create_activation_digest
         self.activation_token  = User.new_token
         self.activation_digest = User.digest(activation_token)
